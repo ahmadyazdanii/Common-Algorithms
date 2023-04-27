@@ -15,7 +15,7 @@ class Node:
 
     def __repr__(self):
         return f"Node({self.value})"
-    
+
 
 class LinkList:
     def __init__(self):
@@ -25,7 +25,7 @@ class LinkList:
 
     def insert(self, value):
         new_node = Node(value)
-        
+
         if self.latest:
             self.latest.next = new_node
             new_node.previous = self.latest
@@ -39,18 +39,17 @@ class LinkList:
 
     def search(self, target):
         return self.root.search(target)
-    
+
     def pop(self):
         latest_node = self.latest
         self.latest = self.latest.previous
         self.latest.next = None
 
         return latest_node
-    
+
     def append(self, node: Node, value):
         if self.length == 0:
             raise ValueError("The list does not have the input node")
-        
 
         new_node = Node(value)
 
@@ -75,7 +74,7 @@ class LinkList:
             self.latest = None
         else:
             raise ValueError("List is empty")
-        
+
         del node
 
     def __repr__(self):
@@ -85,13 +84,14 @@ class LinkList:
         while next_node != None:
             if len(items):
                 items += ", "
-            
+
             items += str(next_node.value)
 
             next_node = next_node.next
 
         return f"[{items}]"
-    
+
+
 if __name__ == "__main__":
     list = LinkList()
     list.insert(1)
@@ -113,4 +113,3 @@ if __name__ == "__main__":
     list.append(item, 12)
 
     print(list)
-
