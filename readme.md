@@ -8,6 +8,8 @@ In the repository I have created, I grouped common algorithms that can be used i
 ## Searching Algorithms
 * [Binary Search](./algorithms/search/binary_search.md)
 
+## Data Structures
+* Linked List
 ## Other
 * [recursion technique](./algorithms/recursion.md)
 
